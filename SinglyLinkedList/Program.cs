@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Transactions;
 
 namespace SinglyLinkedList
 {
@@ -28,13 +29,13 @@ namespace SinglyLinkedList
                     Head = node;
                     Tail = Head;
 
-                    
+
                 }
                 else
                 {
                     Node<T> nodeToInsert = new Node<T>(Value);
                     nodeToInsert.Next = Head;
-                    Head.Next = nodeToInsert;
+                    Head = nodeToInsert;
 
                     Count++;
                 }
@@ -58,34 +59,202 @@ namespace SinglyLinkedList
                 }
             }
 
-            public void AddBefore(Node<T> node, T Value)
+
+
+            public bool AddBefore(T node, T Value)
             {
 
-                
+
+                Node<T> current = Head;
+                for (int i = 0; i < Count; current = current.Next, i++)
+                {
+                    if (Head.Value.Equals(node))
+                    {
+                        AddFirst(Value);
+                        return true;
+                    }
+
+
+                    if (current.Next.Value.Equals(node))
+                    {
+                        Node<T> beforeNode = current.Next;
+
+
+
+                        Node<T> newNode = new Node<T>(Value);
+
+                        current.Next = newNode;
+                        newNode.Next = beforeNode;
+                        Count++;
+                        return true;
+
+                    }
+
+
+                }
+
+                return false;
+            }
+
+            public bool AddAfter(T node, T Value)
+            {
                 Node<T> current = Head;
                 for (int i = 0; i < Count; i++, current = current.Next)
                 {
-                    if (current.Next == node)
+
+
+                    if (Tail.Value.Equals(node))
                     {
-                        Node<T> otherNode = new Node<T>(Value);
-                        otherNode.Next = current;
-                        node.Next = otherNode;
+                        AddLast(Value);
+                        return true;
+                    }
+                    if (current.Value.Equals(node))
+                    {
+
+                        Node<T> afterNode = current.Next;
+                        Node<T> newNode = new Node<T>(Value);
+
+
+                        current.Next = newNode;
+                        newNode.Next = afterNode;
+                        Count++;
+
+                        return true;
+
                     }
                 }
 
+                return false;
             }
 
-            public void AddAfter(Node<T> node, T Value)
+            public bool RemoveFirst()
+            {
+                if (Head == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    Head = Head.Next;
+                    Count--;
+                    return true;
+
+                }
+            }
+
+            public bool RemoveLast()
+            {
+                if (Head == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    Node<T> current = Head;
+
+                    for (int i = 0; i < Count; current = current.Next, i++)
+                    {
+                        if (current.Next.Equals(Tail))
+                        {
+                            current.Next = null;
+                            Count--;
+                            Tail = current;
+                            return true;
+                        }
+                    }
+
+                    return false;
+                }
+            }
+
+            public bool Remove(T Value)
+            {
+                // if value is value of head
+
+                // if value is value of tail
+
+                // otherwise
+                Node<T> current = Head;
+                for (int i = 0; i < Count; current = current.Next, i++)
+                {
+
+                    if (Value.Equals(Head))
+                    {
+                        if (current.Next.Value.Equals(Value))
+                        {
+                            Node<T> nodeAfter = current.Next.Next;
+                            current.Next = nodeAfter;
+                            Count--;
+                            Head = nodeAfter;
+                            return true;
+
+                        }
+                    }
+
+                    if (Value.Equals(Tail))
+                    {
+                        if (current.Next.Value.Equals(Value))
+                        {
+                            Node<T> nodeAfter = current.Next.Next;
+                            current.Next = nodeAfter;
+                            Count--;
+                            Tail = nodeAfter;
+                            return true;
+
+                        }
+                    }
+                    if (current.Next.Value.Equals(Value))
+                    {
+                        Node<T> nodeAfter = current.Next.Next;
+                        current.Next = nodeAfter;
+                        Count--;
+                        return true;
+
+                    }
+
+
+                }
+                return false;
+            }
+
+            public void Clear()
+            {
+                Head = null;
+                Tail = null;
+            }
+
+            public bool Contains(T Value)
             {
                 Node<T> current = Head;
-                for (int i = 0; i < Count; i++, current = current.Next)
+                for (int i = 0; i < Count; current = current.Next, i++)
                 {
-                    if (current == node)
+                    if (current.Equals(Value))
                     {
-                        Node<T> otherNode = new Node<T>(Value);
-                        otherNode.Next = current;
-                        current.Next = otherNode;
+                        return true;
                     }
+                }
+                return false;
+            }
+
+            public Node<T> Search(T Value)
+            {
+                Node<T> current = Head;
+                for (int i = 0; i < Count; current = current.Next, i++)
+                {
+                    if (current.Equals(Value))
+                    {
+                        return current;
+                    }
+                }
+
+                return null;
+            }
+
+            public int Counter
+            {
+                get
+                {
+                    return Count;
                 }
             }
         }
@@ -93,18 +262,29 @@ namespace SinglyLinkedList
         {
 
 
-            int input = 12;
             LinkedList<int> list = new LinkedList<int>();
 
 
             list.AddFirst(12);
+
+
+            list.AddLast(15);
+
+
+            list.AddBefore(15, 19);
             ;
 
-            list.AddLast(input);
+            list.AddAfter(19, 258);
+            ;
 
-            Node<int> testNode = new Node<int>(7);
-            list.AddBefore(testNode, input);
+            list.Remove(258);
+            ;
 
+            list.RemoveFirst();
+            ;
+
+            list.RemoveLast();
+            ;
         }
 
 

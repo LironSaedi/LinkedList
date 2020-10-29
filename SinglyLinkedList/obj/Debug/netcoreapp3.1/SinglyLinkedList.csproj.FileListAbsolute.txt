@@ -11,3 +11,16 @@ C:\Users\Liron.Saedi\source\repos\SinglyLinkedList\SinglyLinkedList\obj\Debug\ne
 C:\Users\Liron.Saedi\source\repos\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.dll
 C:\Users\Liron.Saedi\source\repos\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.pdb
 C:\Users\Liron.Saedi\source\repos\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.genruntimeconfig.cache
+E:\SinglyLinkedList\SinglyLinkedList\bin\Debug\netcoreapp3.1\SinglyLinkedList.exe
+E:\SinglyLinkedList\SinglyLinkedList\bin\Debug\netcoreapp3.1\SinglyLinkedList.deps.json
+E:\SinglyLinkedList\SinglyLinkedList\bin\Debug\netcoreapp3.1\SinglyLinkedList.runtimeconfig.json
+E:\SinglyLinkedList\SinglyLinkedList\bin\Debug\netcoreapp3.1\SinglyLinkedList.runtimeconfig.dev.json
+E:\SinglyLinkedList\SinglyLinkedList\bin\Debug\netcoreapp3.1\SinglyLinkedList.dll
+E:\SinglyLinkedList\SinglyLinkedList\bin\Debug\netcoreapp3.1\SinglyLinkedList.pdb
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.csprojAssemblyReference.cache
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.AssemblyInfoInputs.cache
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.AssemblyInfo.cs
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.csproj.CoreCompileInputs.cache
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.dll
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.pdb
+E:\SinglyLinkedList\SinglyLinkedList\obj\Debug\netcoreapp3.1\SinglyLinkedList.genruntimeconfig.cache

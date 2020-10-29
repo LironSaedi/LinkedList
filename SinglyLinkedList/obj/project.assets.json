@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Liron.Saedi\\source\\repos\\SinglyLinkedList\\SinglyLinkedList\\SinglyLinkedList.csproj",
+      "projectUniqueName": "E:\\SinglyLinkedList\\SinglyLinkedList\\SinglyLinkedList.csproj",
       "projectName": "SinglyLinkedList",
-      "projectPath": "C:\\Users\\Liron.Saedi\\source\\repos\\SinglyLinkedList\\SinglyLinkedList\\SinglyLinkedList.csproj",
+      "projectPath": "E:\\SinglyLinkedList\\SinglyLinkedList\\SinglyLinkedList.csproj",
       "packagesPath": "C:\\Users\\Liron.Saedi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Liron.Saedi\\source\\repos\\SinglyLinkedList\\SinglyLinkedList\\obj\\",
+      "outputPath": "E:\\SinglyLinkedList\\SinglyLinkedList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -65,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
